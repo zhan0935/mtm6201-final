@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Life Centre | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ✅ NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg bg-white py-3 border-bottom">
+  <div class="container-fluid px-4">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/home/logo.png" alt="Logo" class="logo-img me-">
+    </a>
+
+    <!-- Navigation links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="program.html">Programs</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <a class="nav-link" href="#" onclick="toggleTeamPopup()">About us</a>
+        <a class="nav-link" href="#" id="contactLink">Contact & Registration</a>
+    </ul>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="d-flex align-items-center">
+      <!-- Search -->
+      <div class="dropdown me-3">
+        <a href="#" class="nav-link" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/home/search.png" alt="Search" width="36" height="36">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 250px;">
+          <h6 class="fw-bold text-primary mb-2">Search Active Life</h6>
+          <div class="input-group mb-2">
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <small>• Try “badminton”<br>• Try “summer kids program”<br>• Try “fitness classes”</small>
+        </div>
+      </div>
+
+      <!-- Account -->
+      <div class="dropdown">
+        <a href="#" class="nav-link" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/home/user- icon.png" alt="User" width="55" height="55">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 220px;">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">My Court rentals</a>
+          <a class="dropdown-item" href="#">My programs</a>
+          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+            Language <img src="images/uk-flag.png" width="20" alt="EN">
+          </a>
+          <div class="text-center mt-2">
+            <button class="btn btn-primary btn-sm">Sign out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <button class="navbar-toggler ms-3 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="facilities-hero-section">
+    <img src="images/facilities/art.png" alt="Facilities Image" class="hero-image" />
+    
+    <div class="hero-text">
+      <h2>State-of-the-Art Facilities</h2>
+      <p>
+        Explore our modern, clean, and inclusive recreation centre designed to support every visitor — from kids to seniors — in staying active and connected.
+      </p>
+    </div>
+  </section>
+
+  <section class="facility-icons">
+    <div class="icon-card">
+      <img src="images/facilities/icon.png" alt="Swimming Icon">
+      <div class="text">
+        <h3>Swimming Pool</h3>
+        <p>Heated, accessible lanes</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="images/facilities/accessible.png" alt="Accessible Icon">
+      <div class="text">
+        <h3>Barrier-free Access</h3>
+        <p>Inclusive design</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="images/facilities/court.png" alt="Court Icon">
+      <div class="text">
+        <h3>Courts</h3>
+        <p>Pro standard</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="images/facilities/grass.png" alt="Grass Field Icon">
+      <div class="text">
+        <h3>Grass field</h3>
+        <p>High-performance</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="images/facilities/stadium-large .png" alt="Stadium Icon">
+      <div class="text">
+        <h3>Large stadium</h3>
+        <p>Versatile & modern</p>
+      </div>
+    </div>
+    <div class="icon-card">
+      <img src="images/facilities/family.png" alt="Family Icon">
+      <div class="text">
+        <h3>Family-friendly</h3>
+        <p>Activities for all ages</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="awards-section">
+    <h2>Awards</h2>
+    <div class="awards-grid">
+      <div class="award-item" data-award="sports">
+        <img src="images/facilities/family-fun.png" alt="Trophy Icon">
+        <p>Best Sports<br>Facility 2024</p>
+      </div>
+      <div class="award-item" data-award="family">
+        <img src="images/facilities/a.png" alt="Family Icon">
+        <p>Family Fun<br>Award</p>
+      </div>
+      <div class="award-item" data-award="inclusive">
+        <img src="images/facilities/inclusive.png" alt="Inclusive Icon">
+        <p>Inclusive Design<br>Award</p>
+      </div>
+      <div class="award-item" data-award="venue">
+        <img src="images/facilities/venue.png" alt="Venue Icon">
+        <p>Large Venue<br>Leader</p>
+      </div>
+      <div class="award-item" data-award="clean">
+        <img src="images/facilities/clean.png" alt="Clean Icon">
+        <p>Clean & Safe<br>Award</p>
+      </div>
+    </div>
+  
+    <!-- Popups -->
+    <div class="award-popup" id="popup-sports">
+      <div class="award-popup-card">
+        <img src="images/facilities/family-fun.png" alt="Trophy Icon">
+        <h3>Best Sports Facility 2024</h3>
+        <p>Active Life Centre was recognized for providing exceptional, inclusive, and modern sports facilities. From Olympic-size pools to high-performance courts — we’re proud to set the national standard.</p>
+      </div>
+    </div>
+  
+    <div class="award-popup" id="popup-family">
+      <div class="award-popup-card">
+        <img src="images/facilities/award.png" alt="Family Icon">
+        <h3>Family Fun Award</h3>
+        <p>This award celebrates our commitment to building joyful and safe spaces for families. With multi-age programs and family-oriented design, everyone can play, learn, and grow together.</p>
+      </div>
+    </div>
+  
+    <div class="award-popup" id="popup-inclusive">
+      <div class="award-popup-card">
+        <img src="images/facilities/inclusive.png" alt="Inclusive Icon">
+        <h3>Inclusive Design Award</h3>
+        <p>Our centre ensures full accessibility — barrier-free access, adaptive equipment, and inclusive programming. We believe fitness is for everyone, regardless of ability or background.</p>
+      </div>
+    </div>
+  
+    <div class="award-popup" id="popup-venue">
+      <div class="award-popup-card">
+        <img src="images/facilities/venue.png" alt="Venue Icon">
+        <h3>Large Venue Leader</h3>
+        <p>From hosting provincial tournaments to local school events, Active Life Centre offers world-class facilities equipped for large audiences and multi-sport events.</p>
+      </div>
+    </div>
+  
+    <div class="award-popup" id="popup-clean">
+      <div class="award-popup-card">
+        <img src="images/facilities/clean.png" alt="Clean Icon">
+        <h3>Clean & Safe Award</h3>
+        <p>Awarded for maintaining outstanding hygiene, safety protocols, and visitor trust. Our clean, secure, and monitored environment supports both physical and emotional wellness.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="multi-sport-section">
+    <hr class="section-divider">
+    <h2 class="section-title">Multi-Sport Facilities</h2>
+  </section>
+  
+  
+    <div class="multi-sport-images">
+      <div class="large-img">
+        <img src="images/facilities/basketball.png" alt="Basketball court">
+      </div>
+      <div class="small-img">
+        <img src="images/facilities/golf-filed.png" alt="Golf field">
+      </div>
+      <div class="small-img">
+        <img src="images/facilities/playground.png" alt="Soccer field">
+      </div>
+      <div class="small-img">
+        <img src="images/facilities/swimmer.png" alt="Swimming pool">
+      </div>
+      <div class="small-img">
+        <img src="images/facilities/volleyball.png" alt="Volleyball court">
+      </div>
+    </div>
+  
+    <div class="multi-sport-stats">
+      <div class="stat">
+        <h3>2,500 +</h3>
+        <p>Members Weekly</p>
+      </div>
+      <div class="stat">
+        <h3>14</h3>
+        <p>Sport-Specific Zone</p>
+      </div>
+      <div class="stat">
+        <h3>365</h3>
+        <p>Days Open Per Year</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="elite-court-section">
+    <ul class="court-tabs">
+      <li>Tennis</li>
+      <li class="active">Badminton</li>
+      <li>Pickleball</li>
+    </ul>
+  
+    <div class="elite-content-wrapper">
+      <div class="elite-left">
+        <h2>Where Pros Train: Elite-Level<br>Badminton Courts</h2>
+        <div class="elite-image-features">
+          <img src="images/facilities/jump.png" alt="jump">
+          <ul class="feature-list">
+            <li><img src="images/facilities/1.png" alt="Shock Icon"> Shock-Absorbing Flooring</li>
+            <li><img src="images/facilities/2.png" alt="Lighting Icon"> Anti-glare Lighting</li>
+            <li><img src="images/facilities/3.png" alt="Ceiling Icon"> High-Ceiling Architecture</li>
+            <li><img src="images/facilities/4.png" alt="Net Icon"> Pro-Calibrated Net Heights</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="elite-right">
+        <h3 class="court-layout-title">Pro Court Layout</h3>
+        <img src="images/facilities/pro-court.png" alt="Badminton court layout" class="court-layout-img">
+      </div>
+    </div>
+  </section>
+  
+  <div class="facility-tour-section container">
+    <div class="row align-items-start justify-content-center">
+  
+      <div class="col-md-5">
+        <h3 class="facility-title">Immersive Facility Tour</h3>
+        <img src="images/facilities/video.png" alt="Treadmill" class="img-fluid facility-image">
+        <p class="facility-description text-start">
+          Step into our world-class fitness and wellness space<br>
+          through a 360° guided virtual tour.<br>
+          Discover how each space supports your<br>
+          goals and well-being.
+        </p>
+        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="facility-btn">Take the tour</a>
+      </div>
+  
+      <div class="col-md-5">
+        <h3 class="facility-title">Campus Overview</h3>
+        <img src="images/facilities/campus.png" alt="Campus Map" class="img-fluid facility-image">
+        <p class="facility-description text-start">
+          Every sport, every zone — all in one place.<br>
+          Preview the full layout and features of our facility,<br>
+          including accessible routes,<br>
+          entrances, and program areas.
+        </p>
+        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="facility-btn">View facility map</a>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  <section class="location-section container">
+    <div class="row align-items-center justify-content-between">
+      
+      <div class="col-md-6">
+        <h3 class="location-title">Convenient location</h3>
+        <p class="location-description">
+          Located in Guildwood Estates, just off Page Avenue. <br>
+          We offer free parking and excellent transit access for all visitors.
+        </p>
+        <a href="https://www.google.com/maps/place/The+Ottawa+Hospital/@45.3988381,-75.6716303,17z" 
+           target="_blank" 
+           class="location-btn">
+          🗺 Get Direction
+        </a>
+      </div>
+  
+      <div class="col-md-5">
+        <img src="images/facilities/map.png" alt="Map of location" class="img-fluid location-map">
+      </div>
+    
+    </div>
+  </section>
+  
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>ACTIVE LIFE CENTRE</h4>
+        <p>© 2010 – 2025</p>
+        <p><a href="#">Privacy</a> – <a href="#">Terms</a></p>
+      </div>
+  
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#">Swimming</a></li>
+            <li><a href="#">Yoga Studios</a></li>
+            <li><a href="#">Climbing Wall</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Features</h5>
+          <ul>
+            <li><a href="#">Yoga Studios</a></li>
+            <li><a href="#">Climbing Wall</a></li>
+            <li><a href="#">Fitness & Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">Health Tips</a></li>
+            <li><a href="#">Mental Wellness</a></li>
+            <li><a href="#">Newsletter Sign-up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Contact & Registration</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scroll-to-top button -->
+    <div class="scroll-top">
+      <a href="#"><span class="arrow">&#8593;</span></a>
+    </div>
+  </footer>
+  
+    <!-- ✅ Contact Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="contact-popup">
+    <h3>Stay Connected with Active Life</h3>
+    <form>
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Your @email.com" required />
+      <input type="text" placeholder="Social Media (Optional)" />
+      <textarea placeholder="Let us know what you're interested in..." rows="3"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const contactLink = document.getElementById("contactLink");
+  const popupOverlay = document.getElementById("popupOverlay");
+
+  if (contactLink && popupOverlay) {
+    contactLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      popupOverlay.classList.add("active");
+    });
+
+    popupOverlay.addEventListener("click", function (e) {
+      if (e.target === popupOverlay) {
+        popupOverlay.classList.remove("active");
+      }
+    });
+  }
+</script>
+
+<!-- ✅ Meet the Team Popup -->
+<div class="team-popup-overlay" id="teamPopup">
+  <div class="team-popup">
+    <h2 class="team-title">Meet our team!</h2>
+    <div class="team-card" id="teamCard">
+      <img src="images/home/alan.png" alt="Alan">
+      <div class="team-info">
+        <h3>Hi! I’m Alan</h3>
+        <p>Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving.</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <button class="prev-btn" onclick="prevTeam()">←</button>
+      <button class="next-btn" onclick="nextTeam()">→</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const teamMembers = [
+    {
+      name: "Hi! I’m Alan",
+      img: "images/home/alan.png",
+      desc: "Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving."
+    },
+    {
+      name: "Hi! I’m Tom",
+      img: "images/home/tom.png",
+      desc: "Tom is a dedicated Facilities Manager who ensures that every court, room, and amenity is clean, accessible, and ready for use. He believes in building safe and welcoming spaces for every member of the community."
+    },
+    {
+      name: "Hi! I’m Sandra",
+      img: "images/home/sandra.png",
+      desc: "Sandra is the creative mind behind our youth programs. She develops engaging activities for kids and teens, encouraging confidence, friendship, and active lifestyles through fun and inclusive events."
+    }
+  ];
+
+
+  function updateTeamCard() {
+    const teamCard = document.getElementById("teamCard");
+    teamCard.innerHTML = `
+      <img src="${teamMembers[currentIndex].img}" alt="${teamMembers[currentIndex].name}">
+      <div class="team-info">
+        <h3>${teamMembers[currentIndex].name}</h3>
+        <p>${teamMembers[currentIndex].desc}</p>
+      </div>
+    `;
+  }
+
+  function prevTeam() {
+    currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function nextTeam() {
+    currentIndex = (currentIndex + 1) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function toggleTeamPopup() {
+    const popup = document.getElementById("teamPopup");
+    if (popup.style.display === "flex") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "flex";
+      updateTeamCard();
+    }
+  }
+</script>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+<script>
+    const awardItems = document.querySelectorAll(".award-item");
+    const popups = document.querySelectorAll(".award-popup");
+  
+    awardItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const key = item.getAttribute("data-award");
+        document.getElementById(`popup-${key}`).classList.add("active");
+      });
+    });
+  
+    popups.forEach(popup => {
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  
+  <script>
+    const teamPopup = document.getElementById("team-popup");
+    const closeBtn = document.getElementById("team-close");
+    const aboutLink = document.querySelector('a[href="#about-us"]'); 
+    const carousel = document.querySelector('.team-carousel');
+    const members = document.querySelectorAll('.team-member');
+    const prevBtn = document.querySelector('.team-prev');
+    const nextBtn = document.querySelector('.team-next');
+    let currentIndex = 0;
+  
+    if (aboutLink) {
+      aboutLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        teamPopup.classList.remove("hidden");
+        updateCarousel();
+      });
+    }
+  
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        teamPopup.classList.add("hidden");
+      });
+    }
+  
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+  
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + members.length) % members.length;
+        updateCarousel();
+      });
+  
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % members.length;
+        updateCarousel();
+      });
+    }
+  </script>
+  
+  
+  

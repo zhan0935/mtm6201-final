@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Life Centre | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ✅ NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg bg-white py-3 border-bottom">
+  <div class="container-fluid px-4">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/program/logo.png" alt="Logo" class="logo-img me-">
+    </a>
+
+    <!-- Navigation links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="program.html">Programs</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <a class="nav-link" href="#" onclick="toggleTeamPopup()">About us</a>
+        <a class="nav-link" href="#" id="contactLink">Contact & Registration</a>
+    </ul>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="d-flex align-items-center">
+      <!-- Search -->
+      <div class="dropdown me-3">
+        <a href="#" class="nav-link" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/program/search.png" alt="Search" width="36" height="36">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 250px;">
+          <h6 class="fw-bold text-primary mb-2">Search Active Life</h6>
+          <div class="input-group mb-2">
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <small>• Try “badminton”<br>• Try “summer kids program”<br>• Try “fitness classes”</small>
+        </div>
+      </div>
+
+      <!-- Account -->
+      <div class="dropdown">
+        <a href="#" class="nav-link" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/program/user-icon.png" alt="User" width="55" height="55">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 220px;">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">My Court rentals</a>
+          <a class="dropdown-item" href="#">My programs</a>
+          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+            Language <img src="images/uk-flag.png" width="20" alt="EN">
+          </a>
+          <div class="text-center mt-2">
+            <button class="btn btn-primary btn-sm">Sign out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <button class="navbar-toggler ms-3 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- Program Hero Section -->
+<section class="program-hero">
+    <img src="images/program/badminton- player.png" alt="Badminton Player" class="hero-image">
+    <div class="hero-text">
+      <h1>Discover Active Life<br>Programs for Every Age</h1>
+    </div>
+  </section>
+
+<!-- Book Our Premier Indoor & Outdoor Courts -->
+<section class="courts-section">
+    <h2 class="courts-title">Book Our Premier Indoor & Outdoor Courts</h2>
+    <div class="courts-container">
+  
+      <!-- Pickleball -->
+      <div class="court-card">
+        <img src="images/program/pickleball.png" alt="Pickleball court">
+        <div class="card-text">
+          <h3>Pickleball courts</h3>
+          <p>Fast-growing and fun, pickleball is available for drop-in or league play throughout the week.</p >
+          <button class="book-now" onclick="togglePopup()">Book now!</button>
+        </div>
+      </div>
+  
+      <!-- Badminton -->
+      <div class="court-card">
+        <img src="images/program/badminton-courts.png" alt="Badminton court">
+        <div class="card-text">
+          <h3>Badminton courts</h3>
+          <p>Professional-quality courts open for casual and competitive play, suitable for all levels.</p >
+          <button class="book-now" onclick="togglePopup()">Book now!</button>
+        </div>
+      </div>
+  
+      <!-- Tennis -->
+      <div class="court-card">
+        <img src="images/program/tennis-courts.png" alt="Tennis court">
+        <div class="card-text">
+          <h3>Tennis courts</h3>
+          <p>Enjoy outdoor tennis courts open seasonally, with group lessons available for beginners.</p >
+          <button class="book-now" onclick="togglePopup()">Book now!</button>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <!-- Slides -->
+      <div class="carousel-slide active">
+        <img src="images/program/join-fun.png" alt="Swimming">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-text">
+          <h2>Ready to join</h2>
+          <h3>the Fun?</h3>
+          <p>From fitness to fun,<br>our programs keep your family moving.</p>
+        </div>
+      </div>
+  
+      <div class="carousel-slide">
+        <img src="images/program/soccer-boy1.png" alt="Soccer">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-text">
+            <h2>Ready to join</h2>
+            <h3>the Fun?</h3>
+            <p>From fitness to fun,<br>our programs keep your family moving.</p>
+        </div>
+      </div>
+  
+      <div class="carousel-slide">
+        <img src="images/program/climber1.png" alt="Climbing">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-text">
+            <h2>Ready to join</h2>
+            <h3>the Fun?</h3>
+            <p>From fitness to fun,<br>our programs keep your family moving.</p>        </div>
+      </div>
+  
+      <!-- Thumbnails + Arrows -->
+      <div class="thumbnails">
+        <img src="images/program/join-fun.png" class="thumbnail active" data-index="0">
+        <img src="images/program/soccer-boy1.png" class="thumbnail" data-index="1">
+        <img src="images/program/climber1.png" class="thumbnail" data-index="2">
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5 program-section" aria-labelledby="sports-heading">
+    <div class="position-relative banner-wrapper mb-4">
+      <h2 id="sports-heading" class="banner-label">Sports & Recreation</h2>
+    </div>
+  
+    <h3 class="section-title">Stay Active with Our Dynamic Sports Programs</h3>
+  
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100">
+          <picture>
+            <source srcset="images/program/soccer-sports.png" media="(min-width: 768px)">
+            <img src="images/program/soccer-sports.png" class="card-img-top" alt="Soccer game in progress">
+          </picture>
+          <div class="card-body px-0">
+            <h4 class="card-title">Soccer</h4>
+            <p class="card-text">Develop teamwork and skills through recreational soccer leagues for all youth ages.</p>
+            <a href="#" class="btn register-btn">Register</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100">
+          <picture>
+            <source srcset="images/program/golf- field.png" media="(min-width: 768px)">
+            <img src="images/program/golf- field.png" class="card-img-top" alt="Golfer taking a swing on the green">
+          </picture>
+          <div class="card-body px-0">
+            <h4 class="card-title">Golf</h4>
+            <p class="card-text">Join lessons led by certified golf coaches and build confidence on our practice green.</p>
+            <a href="#" class="btn register-btn">Register</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100">
+          <picture>
+            <source srcset="images/program/swimming-sports.png" media="(min-width: 768px)">
+            <img src="images/program/swimming-sports.png" class="card-img-top" alt="Person diving into swimming pool">
+          </picture>
+          <div class="card-body px-0">
+            <h4 class="card-title">Swimming</h4>
+            <p class="card-text">Build water confidence and skills with swim lessons for all ages, led by certified instructors.</p>
+            <a href="#" class="btn register-btn">Register</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100">
+          <picture>
+            <source srcset="images/program/hiker.png" media="(min-width: 768px)">
+            <img src="images/program/hiker.png" class="card-img-top" alt="Hikers walking through a scenic trail">
+          </picture>
+          <div class="card-body px-0">
+            <h4 class="card-title">Hiking</h4>
+            <p class="card-text">Discover scenic trails and nature activities for all levels of experience.</p>
+            <a href="#" class="btn register-btn">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <a href="#" class="btn see-more-btn">See more!</a>
+      <hr class="mt-4">
+    </div>
+  </section>
+  
+  <section class="container my-5">
+    <div class="row g-0 align-items-center club-box">
+      <div class="col-md-5 image-container">
+        <img src="images/program/youth-club.png" alt="Youth badminton game" class="img-fluid full-img">
+      </div>
+  
+      <div class="col-md-7 p-4 bg-light text-section">
+        <h2 class="club-title mb-2">Join the Active Life Youth Sports Club</h2>
+        <div class="club-levels mb-3">
+          <a href="#">Beginner</a> | 
+          <a href="#">Intermediate</a> | 
+          <a href="#">Advanced</a>
+        </div>
+        <p class="club-desc">
+          Great membership for kids and teens who want to stay active, make friends, and compete in local leagues.
+        </p>
+        <div class="text-end">
+          <button type="button" class="btn register-btn mt-2" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Register Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<section class="contact-section">
+    <div class="contact-container">
+      <h2 class="contact-title">Stay Connected with Active Life</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Full Name" required />
+        <input type="email" placeholder="Your @email.com" required />
+        <input type="text" placeholder="Social Media (Optional)" />
+        <textarea placeholder="Let us know what you're interested in..." rows="3"></textarea>
+        <button type="submit" class="register-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>ACTIVE LIFE CENTRE</h4>
+        <p>© 2010 – 2025</p>
+        <p><a href="#">Privacy</a> – <a href="#">Terms</a></p>
+      </div>
+  
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#">Swimming</a></li>
+            <li><a href="#">Yoga Studios</a></li>
+            <li><a href="#">Climbing Wall</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Features</h5>
+          <ul>
+            <li><a href="#">Yoga Studios</a></li>
+            <li><a href="#">Climbing Wall</a></li>
+            <li><a href="#">Fitness & Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">Health Tips</a></li>
+            <li><a href="#">Mental Wellness</a></li>
+            <li><a href="#">Newsletter Sign-up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Contact & Registration</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scroll-to-top button -->
+    <div class="scroll-top">
+      <a href="#"><span class="arrow">&#8593;</span></a>
+    </div>
+  </footer>
+  
+  
+  <!-- ✅ Contact Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="contact-popup">
+    <h3>Stay Connected with Active Life</h3>
+    <form>
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Your @email.com" required />
+      <input type="text" placeholder="Social Media (Optional)" />
+      <textarea placeholder="Let us know what you're interested in..." rows="3"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- ✅ Meet the Team Popup -->
+<div class="team-popup-overlay" id="teamPopup">
+  <div class="team-popup">
+    <h2 class="team-title">Meet our team!</h2>
+    <div class="team-card" id="teamCard">
+      <img src="images/home/alan.png" alt="Alan">
+      <div class="team-info">
+        <h3>Hi! I’m Alan</h3>
+        <p>Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving.</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <button class="prev-btn" onclick="prevTeam()">←</button>
+      <button class="next-btn" onclick="nextTeam()">→</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const teamMembers = [
+    {
+      name: "Hi! I’m Alan",
+      img: "images/home/alan.png",
+      desc: "Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving."
+    },
+    {
+      name: "Hi! I’m Tom",
+      img: "images/home/tom.png",
+      desc: "Tom is a dedicated Facilities Manager who ensures that every court, room, and amenity is clean, accessible, and ready for use. He believes in building safe and welcoming spaces for every member of the community."
+    },
+    {
+      name: "Hi! I’m Sandra",
+      img: "images/home/sandra.png",
+      desc: "Sandra is the creative mind behind our youth programs. She develops engaging activities for kids and teens, encouraging confidence, friendship, and active lifestyles through fun and inclusive events."
+    }
+  ];
+
+  let currentIndex = 0;
+
+  function updateTeamCard() {
+    const teamCard = document.getElementById("teamCard");
+    teamCard.innerHTML = `
+      <img src="${teamMembers[currentIndex].img}" alt="${teamMembers[currentIndex].name}">
+      <div class="team-info">
+        <h3>${teamMembers[currentIndex].name}</h3>
+        <p>${teamMembers[currentIndex].desc}</p>
+      </div>
+    `;
+  }
+
+  function prevTeam() {
+    currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function nextTeam() {
+    currentIndex = (currentIndex + 1) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function toggleTeamPopup() {
+    const popup = document.getElementById("teamPopup");
+    if (popup.style.display === "flex") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "flex";
+      updateTeamCard();
+    }
+  }
+</script>
+
+<script>
+  const contactLink = document.getElementById("contactLink");
+  const popupOverlay = document.getElementById("popupOverlay");
+
+  if (contactLink && popupOverlay) {
+    contactLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      popupOverlay.classList.add("active");
+    });
+
+    popupOverlay.addEventListener("click", function (e) {
+      if (e.target === popupOverlay) {
+        popupOverlay.classList.remove("active");
+      }
+    });
+  }
+</script>
+
+  
+  <!-- 🔘 Register Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us to Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name">
+            </div>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="example@email.com">
+            </div>
+            <div class="mb-3">
+              <label for="messageInput" class="form-label">Message</label>
+              <textarea class="form-control" id="messageInput" rows="3" placeholder="Let us know which program you're interested in."></textarea>
+            </div>
+            <button type="submit" class="btn register-btn w-100 mt-2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<!-- Popup overlay -->
+<div id="popup-overlay" class="popup-overlay" onclick="closePopup(event)">
+    <div class="popup-content" onclick="event.stopPropagation();">
+      <h2>Stay Connected with Active Life</h2>
+      <input type="text" placeholder="Your Full Name">
+      <input type="email" placeholder="Your @email.com">
+      <input type="text" placeholder="Social Media (Optional)">
+      <textarea placeholder="Let us know what you're interested in..."></textarea>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+  
+  <script>
+    function openPopup() {
+      document.getElementById('popup-overlay').classList.add('active');
+    }
+  
+    function closePopup(event) {
+      document.getElementById('popup-overlay').classList.remove('active');
+    }
+  
+    document.querySelectorAll('.book-now').forEach(button => {
+      button.addEventListener('click', openPopup);
+    });
+  </script>
+<script>
+  const teamPopup = document.getElementById("team-popup");
+  const closeBtn = document.getElementById("team-close");
+  const aboutLink = document.querySelector('a[href="#about-us"]'); 
+  const carousel = document.querySelector('.team-carousel');
+  const members = document.querySelectorAll('.team-member');
+  const prevBtn = document.querySelector('.team-prev');
+  const nextBtn = document.querySelector('.team-next');
+  let index= 0;
+
+  if (aboutLink) {
+    aboutLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      teamPopup.classList.remove("hidden");
+      updateCarousel();
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      teamPopup.classList.add("hidden");
+    });
+  }
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + members.length) % members.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % members.length;
+      updateCarousel();
+    });
+  }
+</script>
+
+<script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+  
+    let carouselIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+
+  thumbnails.forEach((thumb, i) => {
+    thumb.classList.toggle('active', i === index);
+  });
+
+  carouselIndex = index;
+}
+
+thumbnails.forEach((thumb, index) => {
+  thumb.addEventListener('click', () => {
+    showSlide(index);
+  });
+});
+
+
+showSlide(carouselIndex);
+
+  
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => {
+        showSlide(index);
+      });
+    });
+  
+    leftArrow.addEventListener('click', () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(newIndex);
+    });
+  
+    rightArrow.addEventListener('click', () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      showSlide(newIndex);
+    });
+  
+    showSlide(currentIndex);
+  </script>
+
+  
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

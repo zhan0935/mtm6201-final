@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Life Centre | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ✅ NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg bg-white py-3 border-bottom">
+  <div class="container-fluid px-4">
+    <!-- Logo -->
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="images/home/logo.png" alt="Active Life Centre Logo" class="logo-img me-">
+</a>
+
+    <!-- Navigation links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="program.html">Programs</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="facilities.html">Facilities</a></li>
+        <a class="nav-link" href="#" onclick="toggleTeamPopup()">About us</a>
+        <a class="nav-link" href="#" id="contactLink">Contact & Registration</a>
+    </ul>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="d-flex align-items-center">
+      <!-- Search -->
+      <div class="dropdown me-3">
+        <a href="#" class="nav-link" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/home/search.png" alt="Search" width="36" height="36">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 250px;">
+          <h6 class="fw-bold text-primary mb-2">Search Active Life</h6>
+          <div class="input-group mb-2">
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <small>• Try “badminton”<br>• Try “summer kids program”<br>• Try “fitness classes”</small>
+        </div>
+      </div>
+
+      <!-- Account -->
+      <div class="dropdown">
+        <a href="#" class="nav-link" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/home/user- icon.png" alt="User" width="55" height="55">
+        </a>
+        <div class="dropdown-menu dropdown-menu-end p-3 shadow" style="min-width: 220px;">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">My Court rentals</a>
+          <a class="dropdown-item" href="#">My programs</a>
+          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+            Language <img src="images/uk-flag.png" width="20" alt="EN">
+          </a>
+          <div class="text-center mt-2">
+            <button class="btn btn-primary btn-sm">Sign out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <button class="navbar-toggler ms-3 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/home/runner.png" class="d-block w-100" alt="Hero Image 1">
+        <div class="carousel-caption d-none d-md-block text-start custom-caption">
+          <h2>"Where every age <br>finds their stride<br>and every program builds joy and connection."</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/home/swimming-hero.png" class="d-block w-100" alt="Hero Image 2">
+        <div class="carousel-caption d-none d-md-block text-start custom-caption">
+          <h2>"Join our community <br> of active living today!"</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/home/golf-hero.png" class="d-block w-100" alt="Hero Image 3">
+        <div class="carousel-caption d-none d-md-block text-start custom-caption">
+          <h2>"Your journey to <br> wellness starts here."</h2>
+        </div>
+      </div>
+    </div>
+  
+    <section class="sports-section">
+        <h2 class="section-title">
+          <span class="title-bg">Sports & Recreation</span>
+        </h2>
+      
+        <div class="sports-carousel-wrapper">
+          <button class="sports-arrow sports-prev" onclick="scrollSports('prev')">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+      
+          <div class="sports-carousel" id="sports-carousel">
+            <div class="sports-card"><img src="images/home/golf.png" alt="Golf"><p>Golf</p></div>
+            <div class="sports-card"><img src="images/home/badminton.png" alt="Badminton"><p>Badminton</p></div>
+            <div class="sports-card"><img src="images/home/tennis.png" alt="Tennis"><p>Tennis</p></div>
+            <div class="sports-card"><img src="images/home/swimming.png" alt="Swimming"><p>Swimming</p></div>
+            <div class="sports-card"><img src="images/home/soccer.png" alt="Soccer"><p>Soccer</p></div>
+            <div class="sports-card"><img src="images/home/hiking.png" alt="Hiking"><p>Hiking</p></div>
+            <div class="sports-card"><img src="images/home/yoga.png" alt="Yoga"><p>Yoga</p></div>
+          </div>
+      
+          <button class="sports-arrow sports-next" onclick="scrollSports('next')">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+      
+        <hr class="section-divider" />
+
+      
+        <section class="facility-section">
+            <div class="facility-content">
+              <div class="text-area">
+                <h2>State of art facilities</h2>
+                <p class="subtitle">Modern. Spacious. Accessible</p>
+                <p class="description">
+                  At Active Life Centre, we welcome individuals and families of all ages and fitness levels. 
+                  Our facilities include a pool, gym, steam rooms, ice rink, and multi-use fitness studios. 
+                  Every space is clean, accessible, and designed to support physical and emotional well-being for all community members.
+                </p>
+          
+                <a href="https://www.christinecallahanoke.com/about" target="_blank" class="ceo-link">
+                  <img src="images/home/christine.png" alt="Christine Oke" class="ceo-avatar">
+                  <span>Christine Oke, Active Life Centre’s CEO</span>
+                </a>
+              </div>
+          
+              <div class="vertical-divider"></div>
+          
+              <div class="image-area">
+                <img src="images/home/3d.png" alt="Facility" class="facility-image">
+                <button class="view-3d-btn" onclick="openPopup()">🔍 3D view</button>
+              </div>
+            </div>
+          
+            <!-- Popup -->
+            <div class="popup" id="popup">
+              <div class="popup-box">
+                <span class="popup-close" onclick="closePopup()">×</span>
+                <p>🔍 Virtual Tour <br> Coming Soon!</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="program-section">
+            <div class="program-row center-row">
+              <div class="image-quote">
+                <img src="images/home/media.png" alt="Kick Image" />
+                <div class="quote-box">
+                  <p class="quote-author">Jackie Joyner Kersee</p>
+                  <p class="quote-text">“Age is no barrier. It's a limitation you put on your mind.”</p>
+                </div>
+                
+              </div>
+            </div>
+          
+            <div class="program-row card-row">
+              <div class="text-block">
+                <h3>Stay Active at Any Age</h3>
+                <p>Our programs support health and happiness at every stage of life — from kids’ camps to senior fitness classes.</p>
+                <a href="#popupOverlay" class="register-btn open-popup">Register now!</a>
+            </div>
+          
+              <div class="text-block">
+                <h3>Exercises that Supports Mental Wellness</h3>
+                <p>Explore how regular movement and group fitness programs can reduce stress and support mental well-being.                </p>
+                <a href="#popupOverlay" class="register-btn open-popup">Register now!</a>
+            </div>
+            </div>
+          </div>
+          
+ <!-- Summer program for kids Section -->
+<section class="summer-program">
+    <h2 class="section-title">Summer program for kids</h2>
+    <div class="program-cards">
+      <!-- Card 1 -->
+      <div class="program-card">
+        <img src="images/home/swimming-lessons.png" alt="Swimming Lessons">
+        <h3>Swimming Lessons</h3>
+        <p>Certified instructors teach water safety, confidence, and essential swim skills through structured, age-appropriate lessons.</p>
+        <a href="#popupOverlay" class="register-btn open-popup">Register now!</a>
+    </div>
+  
+      <!-- Card 2 -->
+      <div class="program-card">
+        <img src="images/home/climbing-adventures.png" alt="Climbing Adventures">
+        <h3>Climbing Adventures</h3>
+        <p>Kids improve strength and courage on our climbing wall — a fun, supervised experience perfect for youth skill-building.</p>
+        <a href="#popupOverlay" class="register-btn open-popup">Register now!</a>
+    </div>
+  
+      <!-- Card 3 -->
+      <div class="program-card">
+        <img src="images/home/youth-soccer.png" alt="Youth Soccer">
+        <h3>Youth Soccer</h3>
+        <p>Our soccer sessions encourage teamwork, coordination, and enjoyment in a safe and energetic environment.</p>
+        <a href="#popupOverlay" class="register-btn open-popup">Register now!</a>
+    </div>
+    </div>
+  </section>
+  <!-- Meet The Team -->
+<section class="team-section">
+  <h2 class="team-title">Meet our team!</h2>
+
+  <div class="team-carousel-wrapper">
+    <button class="team-arrow team-prev">&#10094;</button>
+
+    <div class="team-carousel">
+      <!-- Alan -->
+      <div class="team-member">
+        <img src="images/home/alan.png" class="team-photo" alt="Alan" />
+        <div class="team-info">
+          <h3 class="team-name">Hi! I’m Alan</h3>
+          <p class="team-desc">
+            Alan is part of our passionate team dedicated to inclusive fitness.
+            He supports programs like Aquacise and Senior Fit —
+            creating a welcoming space where everyone can improve health,
+            connect with others, and feel motivated to keep moving.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tom -->
+      <div class="team-member">
+        <img src="images/home/tom.png" class="team-photo" alt="Tom" />
+        <div class="team-info">
+          <h3 class="team-name">Hi! I’m Tom</h3>
+          <p class="team-desc">
+            Tom is a dedicated Facilities Manager who ensures that every court,
+            room, and amenity is clean, accessible, and ready for use.
+            He believes in building safe and welcoming spaces for every member
+            of the community.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sandra -->
+      <div class="team-member">
+        <img src="images/home/sandra.png" class="team-photo" alt="Sandra" />
+        <div class="team-info">
+          <h3 class="team-name">Hi! I’m Sandra</h3>
+          <p class="team-desc">
+            Sandra is the creative mind behind our youth programs.
+            She develops engaging activities for kids and teens, encouraging
+            confidence, friendship, and active lifestyles through fun and inclusive events.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button class="team-arrow team-next">&#10095;</button>
+  </div>
+</section>
+
+
+      <section class="partners-section">
+        <h2 class="section-title"><span class="title-bg">Exclusive Partners</span></h2>
+        <div class="partner-logos">
+          <div class="partner-card">
+            <img src="images/home/cafe.png" alt="FitFuel Café">
+            <p>☕ <strong>FitFuel Café</strong></p>
+          </div>
+          <div class="partner-card">
+            <img src="images/home/gear.png" alt="PulseGear">
+            <p>🏃‍♀️ <strong>PulseGear</strong></p>
+          </div>
+          <div class="partner-card">
+            <img src="images/home/plant.png" alt="WellnessCo">
+            <p>🌿 <strong>WellnessCo</strong></p>
+          </div>
+          <div class="partner-card">
+            <img src="images/home/kids-alliance.png" alt="ActiveKids Alliance">
+            <p>🧍‍♀️🧍‍♂️ <strong>ActiveKids Alliance</strong></p>
+          </div>
+          <div class="partner-card">
+            <img src="images/home/bank.png" alt="Community First Bank">
+            <p>🏛️ <strong>Community First Bank</strong></p>
+          </div>
+        </div>
+      </section>
+      
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h4>ACTIVE LIFE CENTRE</h4>
+      <p>© 2010 – 2025</p>
+      <p><a href="#">Privacy</a> – <a href="#">Terms</a></p>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#">Swimming</a></li>
+          <li><a href="#">Yoga Studios</a></li>
+          <li><a href="#">Climbing Wall</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Features</h5>
+        <ul>
+          <li><a href="#">Yoga Studios</a></li>
+          <li><a href="#">Climbing Wall</a></li>
+          <li><a href="#">Fitness & Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Health Tips</a></li>
+          <li><a href="#">Mental Wellness</a></li>
+          <li><a href="#">Newsletter Sign-up</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Contact & Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll-to-top button -->
+  <div class="scroll-top">
+    <a href="#"><span class="arrow">&#8593;</span></a>
+  </div>
+</footer>
+
+  
+  
+<!-- ✅ Meet the Team Popup -->
+<div class="team-popup-overlay" id="teamPopup">
+  <div class="team-popup">
+    <h2 class="team-title">Meet our team!</h2>
+    <div class="team-card" id="teamCard">
+      <img src="images/home/alan.png" alt="Alan">
+      <div class="team-info">
+        <h3>Hi! I’m Alan</h3>
+        <p>Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving.</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <button class="prev-btn" onclick="prevTeam()">←</button>
+      <button class="next-btn" onclick="nextTeam()">→</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const teamMembers = [
+    {
+      name: "Hi! I’m Alan",
+      img: "images/home/alan.png",
+      desc: "Alan is part of our passionate team dedicated to inclusive fitness. He supports programs like Aquacise and Senior Fit — creating a welcoming space where everyone can improve health, connect with others, and feel motivated to keep moving."
+    },
+    {
+      name: "Hi! I’m Tom",
+      img: "images/home/tom.png",
+      desc: "Tom is a dedicated Facilities Manager who ensures that every court, room, and amenity is clean, accessible, and ready for use. He believes in building safe and welcoming spaces for every member of the community."
+    },
+    {
+      name: "Hi! I’m Sandra",
+      img: "images/home/sandra.png",
+      desc: "Sandra is the creative mind behind our youth programs. She develops engaging activities for kids and teens, encouraging confidence, friendship, and active lifestyles through fun and inclusive events."
+    }
+  ];
+
+
+  function updateTeamCard() {
+    const teamCard = document.getElementById("teamCard");
+    teamCard.innerHTML = `
+      <img src="${teamMembers[currentIndex].img}" alt="${teamMembers[currentIndex].name}">
+      <div class="team-info">
+        <h3>${teamMembers[currentIndex].name}</h3>
+        <p>${teamMembers[currentIndex].desc}</p>
+      </div>
+    `;
+  }
+
+  function prevTeam() {
+    currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function nextTeam() {
+    currentIndex = (currentIndex + 1) % teamMembers.length;
+    updateTeamCard();
+  }
+
+  function toggleTeamPopup() {
+    const popup = document.getElementById("teamPopup");
+    if (popup.style.display === "flex") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "flex";
+      updateTeamCard();
+    }
+  }
+</script>
+
+    <!-- Contact Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="contact-popup">
+      <h3>Stay Connected with Active Life</h3>
+      <form>
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your @email.com" required>
+        <input type="text" placeholder="Social Media (Optional)">
+        <textarea rows="3" placeholder="Let us know what you're interested in..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+    
+<!-- ✅ BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const caroousel = document.getElementById('sports-carousel');
+    const nextButton = document.querySelector('.sports-next');
+  
+    let scrollAmount = 0;
+  
+    function scrollSports() {
+      const containerWidth = carousel.clientWidth;
+      const cardWidth = carousel.querySelector('.sports-card').offsetWidth + 16; 
+  
+      scrollAmount += cardWidth * 3; 
+  
+      if (scrollAmount >= carousel.scrollWidth - containerWidth) {
+        scrollAmount = 0; 
+      }
+  
+      carousel.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+  </script>
+  <script>
+    function scrollSports(direction) {
+      const container = document.getElementById('sports-carousel');
+      const scrollAmount = container.offsetWidth / 2;
+  
+      if (direction === 'next') {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      } else if (direction === 'prev') {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      }
+    }
+  </script>
+  
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+  
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+<script>
+    function togglePopup() {
+      const popup = document.getElementById("popupForm");
+      popup.classList.toggle("active");
+    }
+  </script>
+  <script>
+    function openContactPopup() {
+      document.getElementById('popupOverlay').classList.add('active');
+    }
+  
+    document.getElementById('popupOverlay').addEventListener('click', function (e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
+  </script>
+
+<script>
+    document.querySelectorAll('.open-popup').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        document.getElementById('popupOverlay').classList.add('active');
+      });
+    });
+  
+    document.getElementById('popupOverlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
+  </script>
+  
+  <script>
+    document.getElementById("contactLink").addEventListener("click", function(e) {
+      e.preventDefault(); 
+      document.getElementById("popupOverlay").classList.toggle("active");
+    });
+  </script>
+  
+  <script>
+    function toggleTeamPopup() {
+      const popup = document.getElementById("teamPopup");
+      popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+    }
+  
+    document.addEventListener("click", function (e) {
+      const popup = document.getElementById("teamPopup");
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  </script>
+  
+  <script>
+    const carousel = document.querySelector(".team-carousel");
+    const members = document.querySelectorAll(".team-member");
+    const prevBtn = document.querySelector(".team-prev");
+    const nextBtn = document.querySelector(".team-next");
+  
+    let currentIndex = 0;
+  
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+  
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + members.length) % members.length;
+      updateCarousel();
+    });
+  
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % members.length;
+      updateCarousel();
+    });
+  
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".team-carousel");
+    const members = document.querySelectorAll(".team-member");
+    const prevBtn = document.querySelector(".team-prev");
+    const nextBtn = document.querySelector(".team-next");
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + members.length) % members.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % members.length;
+      updateCarousel();
+    });
+
+    updateCarousel();
+  });
+</script>
+
+</body>
+</html>
